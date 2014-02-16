@@ -19,6 +19,11 @@ build:
         - script:
             name: firefox
             code: |-
+                  echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/10gen.list
+                  echo 'deb http://ppa.launchpad.net/chris-lea/node.js/ubuntu precise main' | sudo tee /etc/apt/sources.list.d/nodejs.list
+                  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+                  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv C7917B12
+                  sudo apt-get update
                   sudo apt-get install firefox build-essential libfreetype6-dev libfontconfig1-dev xvfb x11-xkb-utils xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic x11-apps
         - script:
                 name: Enable virtual display
