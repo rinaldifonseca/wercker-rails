@@ -1,4 +1,4 @@
-box: sabind/ubuntu12.04-nodejs0.10-meteor-ruby2.0.0-firefox@0.0.14
+box: fliplingo/ubuntu12.04-ruby2.0.0-psql9.2@0.0.11 
 services:
   - wercker/postgresql
 build:
